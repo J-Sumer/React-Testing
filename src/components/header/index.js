@@ -2,9 +2,11 @@ import React from 'react'
 import './styles.scss'
 import Logo from '../../assets/logo.png'
 
-export const Header = (props) => {
+const Header = (props) => {
+  // here instead of className="headerComponent" we are using data-test="headerComponent"
+  // this way we can say that it is used in testing and should not be changed
   return (
-    <header>
+    <header data-test="headerComponent">
       <div className="wrap">
         <div className="logo">
           Hakunaa
@@ -14,3 +16,4 @@ export const Header = (props) => {
   )
 }
 
+export default Header
