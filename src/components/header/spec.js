@@ -14,7 +14,7 @@ const setUp = (props={}) => {
 //   const wrapper = component.find(`[data-test='${attr}']`);
 //   return wrapper;
 // }
-
+ 
 describe('Header Component', () => {
   let component;
   beforeEach(() => {
