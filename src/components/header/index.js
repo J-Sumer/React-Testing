@@ -1,6 +1,5 @@
 import React from 'react'
 import './styles.scss'
-import Logo from '../../assets/logo.png'
 
 const Header = (props) => {
   // here instead of className="headerComponent" we are using data-test="headerComponent"
