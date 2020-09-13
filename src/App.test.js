@@ -5,6 +5,9 @@ import React from 'react'
 
 const setUp = (initialState={}) => {
   const store = testStore(initialState)
+  // here shallow(<App store={store} />) is not giving <App/> component, instead it is wrapped inside <contextProvider>
+  // therefore we used childAt(0)
+  // even then it is giving something else. So dive() is used to get the exact component
   const wrapper = shallow(<App store={store} />).childAt(0).dive()
   // console.log(wrapper.debug())
   return wrapper
