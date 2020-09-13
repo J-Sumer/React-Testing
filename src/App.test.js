@@ -30,4 +30,12 @@ describe('App component', ()=> {
     const component = findByTestAttr(wrapper, 'appComponent')
     expect(component.length).toBe(1)
   })
+
+  // to test methods on a class
+  it('exampleMethod_updatesState Method updates state as expected', ()=> {
+    const classInstance = wrapper.instance();
+    classInstance.exampleMethod_updatesState();
+    const newState = classInstance.state.hideBtn;
+    expect(newState).toBe(true)
+  })
 }) 
