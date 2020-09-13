@@ -31,7 +31,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="App" data-test="appComponent">
         <Header></Header>
         <section className="main">
           <Headline header="Posts" desc="click the button to render posts" />
@@ -57,7 +57,6 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
   return {
     posts: state.posts
   }
